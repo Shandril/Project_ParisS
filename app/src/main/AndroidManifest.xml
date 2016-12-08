@@ -22,6 +22,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListMonuments"
+            android:label="@string/list_monuments" >
+        </activity>
+
+
+        <activity
+            android:name=".ListParcours"
+            android:label="@string/List_Parcours" >
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/About_PS" >
+        </activity>
+        <activity
+            android:name=".Aide"
+            android:label="@string/Aide" >
+        </activity>
+        <activity
+            android:name=".Envoyer"
+            android:label="@string/Envoyer" >
+        </activity>
+        <activity
+            android:name=".Parametres"
+            android:label="@string/Parametre_Appli" >
+        </activity>
+
     </application>
 
 </manifest>

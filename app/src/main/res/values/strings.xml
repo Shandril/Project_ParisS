@@ -5,4 +5,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="list_monuments">list_monuments</string>
+    <string name="List_Parcours">List_Parcours</string>
+    <string name="About_PS">About_PS</string>
+    <string name="Envoyer">Envoyer</string>
+    <string name="Aide">Envoyer</string>
+    <string name="Paramètre_Appli">Paramètre_Appli</string>
+    <string name="Parametre_Appli">Parametre_Appli</string>
 </resources>

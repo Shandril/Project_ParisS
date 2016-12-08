@@ -1,5 +1,6 @@
 package com.example.manu_.paris_story;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,15 +14,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Activity;
 
+import android.widget.Button;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, DialogInterface.OnClickListener {
+
+
 
 
     BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -52,8 +58,9 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent SixthActivite = new Intent(MainActivity.this, Envoyer.class);
+                startActivity(SixthActivite);
+
             }
         });
 
@@ -65,6 +72,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -93,12 +101,13 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent SeventhActivite = new Intent(MainActivity.this, Parametres.class);
+            startActivity(SeventhActivite);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -108,19 +117,36 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_monuments) {
-            // Handle the camera action
+
+            Intent secondeActivite = new Intent(MainActivity.this, ListMonuments.class);
+            startActivity(secondeActivite);
+
+
         } else if (id == R.id.nav_parcours) {
+            Intent thirdActivite = new Intent(MainActivity.this, ListParcours.class);
+            startActivity(thirdActivite);
 
         } else if (id == R.id.nav_about) {
+            Intent FourthActivite = new Intent(MainActivity.this, About.class);
+            startActivity(FourthActivite);
 
         } else if (id == R.id.nav_help) {
+            Intent FithActivite = new Intent(MainActivity.this, Aide.class);
+            startActivity(FithActivite);
 
         } else if (id == R.id.nav_send) {
+            Intent SixthActivite = new Intent(MainActivity.this, Envoyer.class);
+            startActivity(SixthActivite);
 
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(DialogInterface dialog, int which) {
+
     }
 }
