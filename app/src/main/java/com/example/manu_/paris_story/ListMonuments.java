@@ -33,7 +33,7 @@ public class ListMonuments extends Activity  {
             ListView mListView;
             mListView = (ListView) findViewById(R.id.listView);
 
-            String[] prenoms = new String[]{
+            String[] liste = new String[]{
                     "3 Restaurant Musée Maxim’s\n" ,
                     "4 Jardin Albert kahn\n" ,
                     "5 Place de Catalogne\n" ,
@@ -194,18 +194,8 @@ public class ListMonuments extends Activity  {
 
                 mListView = (ListView) findViewById(R.id.listView);
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(ListMonuments.this,
-                        android.R.layout.simple_list_item_single_choice, prenoms);
+                        android.R.layout.simple_list_item_single_choice, liste);
                 mListView.setAdapter(adapter);
-
-           /*mList_Monuments = (ListView) findViewById(R.id.ListMonuments);
-
-            List<String> listeM = new ArrayList<String>();
-            listeM.add("Tour eiffel");
-            listeM.add("Notre Dame de Paris");
-            listeM.add("les champs élysées");
-
-            ArrayAdapter<String> adapter= new ArrayAdapter(this, android.R.layout.simple_list_item_single_choice, listeM);
-            mList_Monuments.setAdapter(adapter);*/
 
 
             }

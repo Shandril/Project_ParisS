@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity
             Intent thirdActivite = new Intent(MainActivity.this, ListParcours.class);
             startActivity(thirdActivite);
 
-        } else if (id == R.id.nav_about) {
-            Intent FourthActivite = new Intent(MainActivity.this, About.class);
+        } else if (id == R.id.nav_epoque) {
+            Intent FourthActivite = new Intent(MainActivity.this, Epoque.class);
             startActivity(FourthActivite);
 
         } else if (id == R.id.nav_help) {

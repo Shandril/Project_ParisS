@@ -27,13 +27,12 @@
             android:label="@string/list_monuments" >
         </activity>
 
-
         <activity
             android:name=".ListParcours"
             android:label="@string/List_Parcours" >
         </activity>
         <activity
-            android:name=".About"
+            android:name=".Epoque"
             android:label="@string/About_PS" >
         </activity>
         <activity
